@@ -43,14 +43,10 @@ Instructions on how to use them in your own application are linked below.
 | Plugin |
 | ------ |
 | Mongoose | 
-| express validator | 
-| Morgan | 
-| Pm2 |
-| Lodash|
-| node Cache |
-| socket.io |
-| bcrypt |
-|Jwt token|
+| Material ui | 
+| axios| 
+| Jwt |
+
 
 
 
