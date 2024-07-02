@@ -45,6 +45,7 @@ export default function Login() {
         localStorage.setItem("token",res.data)
         setTimeout(()=>{
             navigate("/home")
+            window.location.reload()
         },600)
     }
    })

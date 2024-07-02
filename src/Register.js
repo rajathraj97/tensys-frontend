@@ -44,7 +44,7 @@ export default function Register() {
    .then((res)=>{
     console.log(res.data)
     if(res?.data?.hasOwnProperty("_id")){
-        navigate("/login")
+        navigate("/")
     }
    })
    .catch((err)=>{
