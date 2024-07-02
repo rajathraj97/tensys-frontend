@@ -18,7 +18,7 @@ export default function Home() {
   const [data, setData] = useState(null);
   const [display, setDisplay] = useState(false);
   const { vertical, horizontal, open } = state;
-  const ENDPOINT = "http://localhost:3000";
+  const ENDPOINT = "https://tensys-task-backend.onrender.com";
   useEffect(() => {
     setData(!!localStorage.getItem("token") ? jwtDecode(localStorage.getItem("token")):{});
   }, [localStorage.getItem("token")]);

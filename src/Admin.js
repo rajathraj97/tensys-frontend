@@ -43,7 +43,7 @@ const Admin = (props) => {
   const handleClose = () => {
     setOpen(false);
     let obj = {_id:seletedcell._id,status:select,assigned_user:seletedcell.assigned_user,assigned_user:assign}
-    axios.put("http://localhost:3000/api/updatetask",obj)
+    axios.put("https://tensys-task-backend.onrender.com/api/updatetask",obj)
     .then((res)=>{
         console.log(res)
     })
@@ -60,7 +60,7 @@ const Admin = (props) => {
 
   const handleDeleteTask = (params) =>{
     let obj = {_id:params._id}
-    axios.delete(`http://localhost:3000/api/deletetask?_id=${params._id}`,obj)
+    axios.delete(`https://tensys-task-backend.onrender.com/api/deletetask?_id=${params._id}`,obj)
     .then((res)=>{
         console.log(res)
         setTrigger(!trigger)
@@ -195,7 +195,7 @@ const handletask = (e) =>{
 }
 const handleCreateTask = () =>{
     let obj = {taskName:taskname,details:taskdetails,assigned_user:assign,status:select,priority,userId:props?.data?._id}
-    axios.post("http://localhost:3000/api/createtask",obj)
+    axios.post("https://tensys-task-backend.onrender.com/api/createtask",obj)
     .then((res)=>{console.log(res)})
     .catch((err)=>{console.log(err)})
 }
@@ -267,7 +267,7 @@ const handleCreateTask = () =>{
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/tasks?limit=${limit}`)
+      .get(`https://tensys-task-backend.onrender.com/api/tasks?limit=${limit}`)
       .then((res) => {
         console.log(res.data);
         setTicketData(res.data);
@@ -275,7 +275,7 @@ const handleCreateTask = () =>{
       .catch((err) => {
         console.log(err);
       });
-    axios.get('http://localhost:3000/api/getall')
+    axios.get('https://tensys-task-backend.onrender.com/api/getall')
     .then((res)=>{
         setUsers(res.data)
     })

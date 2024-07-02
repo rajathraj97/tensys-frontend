@@ -36,7 +36,7 @@ const User = (props) => {
   const handleClose = () => {
     setOpen(false);
     let obj = {_id:seletedcell._id,status:select,assigned_user:seletedcell.assigned_user}
-    axios.put("http://localhost:3000/api/updatetask",obj)
+    axios.put("https://tensys-task-backend.onrender.com/api/updatetask",obj)
     .then((res)=>{
         console.log(res)
     })
@@ -141,7 +141,7 @@ const User = (props) => {
         : null
     );
     axios
-      .post("http://localhost:3000/api/getUserDetails", {
+      .post("https://tensys-task-backend.onrender.com/api/getUserDetails", {
         userId: props?.data?._id,
       })
       .then((res) => {

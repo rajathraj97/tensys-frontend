@@ -40,7 +40,7 @@ export default function Register() {
 
   const handleSubmit = () => {
    const obj = {username,email,password}
-   axios.post("http://localhost:3000/api/register",obj)
+   axios.post("https://tensys-task-backend.onrender.com/api/register",obj)
    .then((res)=>{
     console.log(res.data)
     if(res?.data?.hasOwnProperty("_id")){

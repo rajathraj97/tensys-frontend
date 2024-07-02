@@ -38,7 +38,7 @@ export default function Login() {
     const navigate = useNavigate()
   const handleSubmit = () => {
     let obj={email,password}
-   axios.post("http://localhost:3000/api/login",obj)
+   axios.post("https://tensys-task-backend.onrender.com/api/login",obj)
    .then((res)=>{
     console.log(res)
     if(res.data.includes("Bearer")){
